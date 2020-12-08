@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wwu-a8-H2F">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Audio Engine View Controller-->
+        <scene sceneID="3Wt-j9-uXz">
+            <objects>
+                <viewController storyboardIdentifier="AudioEngine" id="Wwu-a8-H2F" customClass="AudioEngineViewController" customModule="BroadcastSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fC0-WY-vwY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JTg-hc-Nls">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6d-FD-umv">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="745.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CPr-IU-LxN">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="745.5"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uDC-9A-kmC">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NWs-aV-KLa">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="録音"/>
+                                                                <connections>
+                                                                    <action selector="startRecord:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="P0M-YO-lVF"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oxW-ce-6Zo">
+                                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="録音停止"/>
+                                                                <connections>
+                                                                    <action selector="stopRecord:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="cIk-X8-HOJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w1c-R1-ace">
+                                                                <rect key="frame" x="207" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="録音再開"/>
+                                                                <connections>
+                                                                    <action selector="resumeRecord:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="ea8-E4-CFx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy7-sp-Lbf">
+                                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="録音一時停止"/>
+                                                                <connections>
+                                                                    <action selector="pauseRecord:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="09S-jb-Bdm"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="ZJN-M2-Gtk"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="U8o-tm-3W0">
+                                                        <rect key="frame" x="0.0" y="52" width="414" height="32"/>
+                                                        <segments>
+                                                            <segment title="None"/>
+                                                            <segment title="Delay"/>
+                                                            <segment title="Distortion"/>
+                                                            <segment title="EQ"/>
+                                                            <segment title="Reverb"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KGt-MD-la2">
+                                                        <rect key="frame" x="0.0" y="95" width="414" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not recording" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2C-5L-5gL">
+                                                        <rect key="frame" x="0.0" y="127.5" width="414" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Jk1-Jp-Jfi">
+                                                        <rect key="frame" x="0.0" y="160" width="414" height="32"/>
+                                                        <segments>
+                                                            <segment title="Not muted"/>
+                                                            <segment title="Muted"/>
+                                                        </segments>
+                                                        <connections>
+                                                            <action selector="muteSegmentValueChanged:" destination="Wwu-a8-H2F" eventType="valueChanged" id="p6M-2N-mQ5"/>
+                                                        </connections>
+                                                    </segmentedControl>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0YR-gZ-klc">
+                                                        <rect key="frame" x="0.0" y="203" width="414" height="128"/>
+                                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="WnN-Sf-3oE"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="RGS-Y2-3V8">
+                                                        <rect key="frame" x="0.0" y="343" width="414" height="32"/>
+                                                        <segments>
+                                                            <segment title="録音"/>
+                                                            <segment title="mp3(Long)"/>
+                                                            <segment title="mp3(Short)"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="QeU-Kc-1qQ">
+                                                        <rect key="frame" x="0.0" y="386" width="414" height="32"/>
+                                                        <segments>
+                                                            <segment title="None"/>
+                                                            <segment title="Delay"/>
+                                                            <segment title="Distortion"/>
+                                                            <segment title="EQ"/>
+                                                            <segment title="Reverb"/>
+                                                        </segments>
+                                                    </segmentedControl>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6Um-bG-fgZ">
+                                                        <rect key="frame" x="0.0" y="429" width="414" height="40"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tCJ-Ti-aH8">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="再生"/>
+                                                                <connections>
+                                                                    <action selector="startAudio:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="7a5-Pb-hGJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kh4-da-w3S">
+                                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="再生停止"/>
+                                                                <connections>
+                                                                    <action selector="stopAudio:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="oZZ-6E-gQ2"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGR-2D-Vhp">
+                                                                <rect key="frame" x="207" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="再開"/>
+                                                                <connections>
+                                                                    <action selector="resumeAudio:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="4v0-GS-8RY"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKQ-8A-vYN">
+                                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="40"/>
+                                                                <state key="normal" title="一時停止"/>
+                                                                <connections>
+                                                                    <action selector="pauseAudio:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="Ptb-vX-vFT"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="7D0-P4-jih"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not playing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n3R-2R-13m">
+                                                        <rect key="frame" x="0.0" y="481" width="414" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iNm-XL-Yev">
+                                                        <rect key="frame" x="0.0" y="513.5" width="414" height="128"/>
+                                                        <color key="backgroundColor" systemColor="separatorColor"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="6Uu-oi-s99"/>
+                                                        </constraints>
+                                                    </view>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-ty-Hiw">
+                                                        <rect key="frame" x="0.0" y="653.5" width="414" height="30"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-cY-n4b">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                                                <state key="normal" title="録音開始"/>
+                                                                <connections>
+                                                                    <action selector="recordWithBGMStart:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="roC-Q4-Dkx"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-bS-hLT">
+                                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="30"/>
+                                                                <state key="normal" title="録音停止"/>
+                                                                <connections>
+                                                                    <action selector="recordWIthBGMStop:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="1dE-M8-kyB"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9da-3R-Ote">
+                                                                <rect key="frame" x="207" y="0.0" width="103.5" height="30"/>
+                                                                <state key="normal" title="BGM再生"/>
+                                                                <connections>
+                                                                    <action selector="playBGM:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="qbA-Y4-JcJ"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdx-bT-fqq">
+                                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="30"/>
+                                                                <state key="normal" title="BGM停止"/>
+                                                                <connections>
+                                                                    <action selector="stopBGM:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="t2E-Ge-5cI"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgy-GL-OGL">
+                                                        <rect key="frame" x="0.0" y="695.5" width="414" height="50"/>
+                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    </view>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="CPr-IU-LxN" firstAttribute="leading" secondItem="q6d-FD-umv" secondAttribute="leading" id="AHk-vE-qW8"/>
+                                            <constraint firstAttribute="trailing" secondItem="CPr-IU-LxN" secondAttribute="trailing" id="MJz-cM-E3p"/>
+                                            <constraint firstItem="CPr-IU-LxN" firstAttribute="top" secondItem="q6d-FD-umv" secondAttribute="top" id="QLp-vB-NkI"/>
+                                            <constraint firstAttribute="bottom" secondItem="CPr-IU-LxN" secondAttribute="bottom" id="ipt-lc-sI2"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="q6d-FD-umv" secondAttribute="trailing" id="E85-G3-DrG"/>
+                                    <constraint firstItem="q6d-FD-umv" firstAttribute="top" secondItem="JTg-hc-Nls" secondAttribute="top" id="ENc-fv-wbg"/>
+                                    <constraint firstItem="q6d-FD-umv" firstAttribute="leading" secondItem="JTg-hc-Nls" secondAttribute="leading" id="GJd-Do-FVc"/>
+                                    <constraint firstAttribute="bottom" secondItem="q6d-FD-umv" secondAttribute="bottom" id="y6w-h1-1rR"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8rP-n9-fXU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="JTg-hc-Nls" secondAttribute="bottom" id="I3A-hS-rFf"/>
+                            <constraint firstItem="q6d-FD-umv" firstAttribute="width" secondItem="fC0-WY-vwY" secondAttribute="width" id="K6W-bf-pFl"/>
+                            <constraint firstAttribute="trailing" secondItem="JTg-hc-Nls" secondAttribute="trailing" id="ajZ-x2-VaV"/>
+                            <constraint firstItem="JTg-hc-Nls" firstAttribute="top" secondItem="fC0-WY-vwY" secondAttribute="top" id="kFI-bQ-zgB"/>
+                            <constraint firstItem="JTg-hc-Nls" firstAttribute="leading" secondItem="fC0-WY-vwY" secondAttribute="leading" id="o4M-LJ-bY8"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="audioEffectSegment" destination="QeU-Kc-1qQ" id="m0g-R1-Dhs"/>
+                        <outlet property="audioTypeSegment" destination="RGS-Y2-3V8" id="5G6-Yf-fOT"/>
+                        <outlet property="interruptionTypeLabel" destination="c2C-5L-5gL" id="58E-jq-ax8"/>
+                        <outlet property="isPlayingLabel" destination="n3R-2R-13m" id="4fp-3k-7f3"/>
+                        <outlet property="isRecordingLabel" destination="KGt-MD-la2" id="Zl3-EL-uoI"/>
+                        <outlet property="recordEffectSegment" destination="U8o-tm-3W0" id="k3r-99-zxc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9je-1J-Eel" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-390" y="-22"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="separatorColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
