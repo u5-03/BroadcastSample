@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wwu-a8-H2F">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wwu-a8-H2F">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -20,10 +21,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q6d-FD-umv">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="745.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="703.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="CPr-IU-LxN">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="745.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="703.5"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="uDC-9A-kmC">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="40"/>
@@ -167,32 +168,32 @@
                                                             <constraint firstAttribute="height" constant="1" id="6Uu-oi-s99"/>
                                                         </constraints>
                                                     </view>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-ty-Hiw">
-                                                        <rect key="frame" x="0.0" y="653.5" width="414" height="30"/>
+                                                    <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4Fi-ty-Hiw">
+                                                        <rect key="frame" x="0.0" y="647.5" width="414" height="0.0"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-cY-n4b">
-                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="30"/>
+                                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6T-cY-n4b">
+                                                                <rect key="frame" x="0.0" y="0.0" width="103.5" height="0.0"/>
                                                                 <state key="normal" title="録音開始"/>
                                                                 <connections>
                                                                     <action selector="recordWithBGMStart:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="roC-Q4-Dkx"/>
                                                                 </connections>
                                                             </button>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-bS-hLT">
-                                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="30"/>
+                                                            <button contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZdA-bS-hLT">
+                                                                <rect key="frame" x="103.5" y="0.0" width="103.5" height="0.0"/>
                                                                 <state key="normal" title="録音停止"/>
                                                                 <connections>
                                                                     <action selector="recordWIthBGMStop:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="1dE-M8-kyB"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9da-3R-Ote">
-                                                                <rect key="frame" x="207" y="0.0" width="103.5" height="30"/>
+                                                                <rect key="frame" x="207" y="0.0" width="103.5" height="0.0"/>
                                                                 <state key="normal" title="BGM再生"/>
                                                                 <connections>
                                                                     <action selector="playBGM:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="qbA-Y4-JcJ"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hdx-bT-fqq">
-                                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="30"/>
+                                                                <rect key="frame" x="310.5" y="0.0" width="103.5" height="0.0"/>
                                                                 <state key="normal" title="BGM停止"/>
                                                                 <connections>
                                                                     <action selector="stopBGM:" destination="Wwu-a8-H2F" eventType="touchUpInside" id="t2E-Ge-5cI"/>
@@ -201,7 +202,7 @@
                                                         </subviews>
                                                     </stackView>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jgy-GL-OGL">
-                                                        <rect key="frame" x="0.0" y="695.5" width="414" height="50"/>
+                                                        <rect key="frame" x="0.0" y="653.5" width="414" height="50"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                     </view>
                                                 </subviews>

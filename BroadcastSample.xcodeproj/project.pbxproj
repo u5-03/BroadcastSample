@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0EAFE0872584573A0007C4C3 /* BGMRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EAFE0862584573A0007C4C3 /* BGMRecorder.swift */; };
+		6846ADB1295735DA00522443 /* SwiftExtensions in Frameworks */ = {isa = PBXBuildFile; productRef = 6846ADB0295735DA00522443 /* SwiftExtensions */; };
+		6846ADB42957373100522443 /* FLEX in Frameworks */ = {isa = PBXBuildFile; productRef = 6846ADB32957373100522443 /* FLEX */; };
 		6884F264253C84BA00472111 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884F263253C84BA00472111 /* AppDelegate.swift */; };
 		6884F266253C84BA00472111 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884F265253C84BA00472111 /* SceneDelegate.swift */; };
 		6884F268253C84BA00472111 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6884F267253C84BA00472111 /* ViewController.swift */; };
@@ -27,6 +29,7 @@
 
 /* Begin PBXFileReference section */
 		0EAFE0862584573A0007C4C3 /* BGMRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BGMRecorder.swift; sourceTree = "<group>"; };
+		6846ADAE293FAFB400522443 /* BroadcastSample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BroadcastSample.entitlements; sourceTree = "<group>"; };
 		6884F260253C84BA00472111 /* BroadcastSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BroadcastSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6884F263253C84BA00472111 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6884F265253C84BA00472111 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6846ADB1295735DA00522443 /* SwiftExtensions in Frameworks */,
+				6846ADB42957373100522443 /* FLEX in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,6 +89,7 @@
 		6884F262253C84BA00472111 /* BroadcastSample */ = {
 			isa = PBXGroup;
 			children = (
+				6846ADAE293FAFB400522443 /* BroadcastSample.entitlements */,
 				68AA773E2556719200A46203 /* Resources */,
 				6884F278253C8C3700472111 /* Samples */,
 				6884F263253C84BA00472111 /* AppDelegate.swift */,
@@ -100,7 +106,7 @@
 		6884F278253C8C3700472111 /* Samples */ = {
 			isa = PBXGroup;
 			children = (
-				68936B312555A1CC004C6CE6 /* KaraokeEngine */,
+				68936B312555A1CC004C6CE6 /* AudioEngine */,
 				6884F279253C8C3F00472111 /* Player */,
 			);
 			path = Samples;
@@ -115,7 +121,7 @@
 			path = Player;
 			sourceTree = "<group>";
 		};
-		68936B312555A1CC004C6CE6 /* KaraokeEngine */ = {
+		68936B312555A1CC004C6CE6 /* AudioEngine */ = {
 			isa = PBXGroup;
 			children = (
 				68DD1180256179FD00832F06 /* Constants */,
@@ -123,7 +129,7 @@
 				68936B352555A26A004C6CE6 /* AudioEngine.storyboard */,
 				68936B382555A279004C6CE6 /* AudioEngineViewController.swift */,
 			);
-			path = KaraokeEngine;
+			path = AudioEngine;
 			sourceTree = "<group>";
 		};
 		68AA773E2556719200A46203 /* Resources */ = {
@@ -186,6 +192,8 @@
 			);
 			name = BroadcastSample;
 			packageProductDependencies = (
+				6846ADB0295735DA00522443 /* SwiftExtensions */,
+				6846ADB32957373100522443 /* FLEX */,
 			);
 			productName = BroadcastSample;
 			productReference = 6884F260253C84BA00472111 /* BroadcastSample.app */;
@@ -215,6 +223,8 @@
 			);
 			mainGroup = 6884F257253C84BA00472111;
 			packageReferences = (
+				6846ADAF295735DA00522443 /* XCRemoteSwiftPackageReference "SwiftExtensions" */,
+				6846ADB22957373100522443 /* XCRemoteSwiftPackageReference "FLEX" */,
 			);
 			productRefGroup = 6884F261253C84BA00472111 /* Products */;
 			projectDirPath = "";
@@ -402,6 +412,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BroadcastSample/BroadcastSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 669226BDWM;
 				INFOPLIST_FILE = BroadcastSample/Info.plist;
@@ -421,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = BroadcastSample/BroadcastSample.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 669226BDWM;
 				INFOPLIST_FILE = BroadcastSample/Info.plist;
@@ -457,6 +469,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6846ADAF295735DA00522443 /* XCRemoteSwiftPackageReference "SwiftExtensions" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/u5-03/SwiftExtensions";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		6846ADB22957373100522443 /* XCRemoteSwiftPackageReference "FLEX" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/FLEXTool/FLEX";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6846ADB0295735DA00522443 /* SwiftExtensions */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6846ADAF295735DA00522443 /* XCRemoteSwiftPackageReference "SwiftExtensions" */;
+			productName = SwiftExtensions;
+		};
+		6846ADB32957373100522443 /* FLEX */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6846ADB22957373100522443 /* XCRemoteSwiftPackageReference "FLEX" */;
+			productName = FLEX;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6884F258253C84BA00472111 /* Project object */;
 }

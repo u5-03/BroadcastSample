@@ -13,9 +13,7 @@ final class BGMRecorder {
     private let mixerNode = AVAudioMixerNode()
     private let audioPlayerNode = AVAudioPlayerNode()
 
-    init() {
-        prepare()
-    }
+    init() {}
 
     func startRecord() {
 
@@ -26,6 +24,8 @@ final class BGMRecorder {
     }
 
     func playBGM() {
+        engine.reset()
+        prepare()
         audioPlayerNode.play()
 //        audioPlayerNode.scheduleBuffer(audioFileBuffer, at: nil, options: .loops, completionHandler: nil)
     }
